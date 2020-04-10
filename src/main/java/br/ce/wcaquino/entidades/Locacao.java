@@ -41,5 +41,4 @@ public class Locacao {
 	public void setFilmes(List<Filme> filmes) {
 		this.filmes = filmes;
 	}
-	
 }
