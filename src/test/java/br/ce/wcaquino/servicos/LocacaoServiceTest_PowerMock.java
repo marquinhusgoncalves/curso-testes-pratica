@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -56,6 +58,18 @@ public class LocacaoServiceTest_PowerMock {
 	public void setup(){
 		MockitoAnnotations.initMocks(this);
 		service = PowerMockito.spy(service);
+		System.out.println("Iniciando 4...");
+		CalculadoraTest.ordem.append(4);
+	}
+	
+	@After
+	public void tearDown(){
+		System.out.println("finalizando 4...");
+	}
+	
+	@AfterClass
+	public static void tearDownClass(){
+		System.out.println(CalculadoraTest.ordem.toString());
 	}
 	
 	@Test
